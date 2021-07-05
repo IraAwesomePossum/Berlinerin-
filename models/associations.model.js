@@ -4,9 +4,13 @@ const AssociationSchema = new Schema({
   name: String,
   address: String,
   consultationIn: [],
-  language: String,
+  eMail: String,
+  website:String,
+  language: [],
+  
 });
 console.log("hi")
 const association = mongoose.model("association", associationSchema);
 module.exports = association;
 
+ 
