@@ -1,15 +1,23 @@
 <div class="signup"><h1>Here you can sign up for our website</h1>
+<div id="form">
 
-<form action="/signup" method="POST"> 
-  <div class="mb-3">
-    <label for="username" class="form-label">Username</label>
-    <input type="text" name="username"  class="form-control" id="username" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your details with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control" id="password">
-  </div>
-  <button type="submit" class="btn btn-primary">Sign up</button>
-</form>
+<form action="/signup"   method="post">
+
+<div class="formgroup" id="name-form">
+    <label for="name">Your name*</label>
+    <input type="text" id="name" name="name" />
 </div>
+
+<div class="formgroup" id="email-form">
+    <label for="email">Your e-mail*</label>
+    <input type="email" id="email" name="email" />
+</div>
+
+
+  <input type="submit" value="Sign up!" />
+</form>
+
+</div>
+
+</div>
+
