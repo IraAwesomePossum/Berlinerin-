@@ -1,1 +1,14 @@
 
+<h1>Here is the list of doctors:</h1>
+{{#each doctors}}	
+  <div class="card" style="width: 18rem;">
+  <img class="doctorImg" src="{{img}}"  class="card-img-top" alt="img">
+  <div class="card-body">
+    <h5 class="card-title">{{firstName}} {{lastName}}</h5>
+    <p class="card-text">This doctor is a {{specialisation}} with average rating of {{averageRating}}</p>
+    <a href="#" class="btn btn-primary">Doctor's website</a>
+  </div>
+</div>
+{{/each}}
+
+

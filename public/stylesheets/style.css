@@ -1,8 +1,8 @@
 body {
   margin: 0 auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffeedb;
 }
 
 .landing {
@@ -11,6 +11,7 @@ body {
   position: relative;
   background-size: cover;
   background-position: center center;
+  background-color: #ffeedb;
 }
 
 .landing h1 {
@@ -22,6 +23,7 @@ body {
   color: black;
   font-size: 70px;
   margin: 0;
+  z-index: 55;
 }
 .landing h3 {
   position: absolute;
@@ -29,6 +31,8 @@ body {
   font-size: 30px;
   top: 330px;
   left: 100px;
+  margin-top: 50px;
+  z-index: 55;
 }
 
 .links {
@@ -39,8 +43,8 @@ body {
   left: 220px;
 }
 
-a:link,
-a:visited {
+.frontPage:link,
+.frontPage:visited {
   background-color: #dfeeea;
   color: black;
   padding: 20px 55px;
@@ -50,8 +54,8 @@ a:visited {
   border-radius: 15px;
   margin-right: 20px;
 }
-a:hover,
-a:active {
+.frontPage:hover,
+.frontPage:active {
   background-color: #a7c4bc;
 }
 
@@ -63,8 +67,102 @@ a:active {
   max-height: 100%;
 }
 
+.lady2 {
+  position: absolute;
+  top: 100px;
+  right: 250px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lady3 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 100%;
+  max-height: 100%;
+  transform: rotate(20deg);
+}
+
 .signup {
   background-image: url("/images/abstract.jpg");
   min-height: 100vh;
   background-size: cover;
+}
+.card-body {
+  background-color: rgb(205, 216, 182);
+}
+
+h1 {
+  text-align: center;
+}
+
+#form {
+  height: 100%;
+  background-color: #98d4f3;
+  overflow: hidden;
+  position: relative;
+}
+form {
+  position: absolute;
+  top: 150px;
+  margin: 0 auto;
+  width: 500px;
+  padding-top: 40px;
+  color: white;
+  position: relative;
+}
+label,
+input,
+textarea {
+  display: block;
+}
+input,
+textarea {
+  width: 500px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 10px;
+  font-size: 1em;
+  color: #676767;
+  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -o-transition: border 0.5s;
+  border: solid 3px #98d4f3;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input:focus,
+textarea:focus {
+  border: solid 3px #77bde0;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+  overflow: auto;
+}
+input[type="submit"] {
+  background-color: #f90;
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 1.29em;
+  font-family: "Sniglet", cursive;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+input[type="submit"]:hover {
+  background-color: #e58f0e;
+}
+label {
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding-left: 20px;
 }

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/User.model");
+const Doctors = require("../models/doctor.model");
 const bcryptjs = require("bcrypt");
 const saltRounds = 10;
 
@@ -22,6 +23,16 @@ router.get("/profile", (req, res, next) => {
 
 router.get("/signupConf", (req, res, next) => {
   res.render("signupConf");
+});
+
+router.get("/doctors", (req, res, next) => {
+  Doctors.find()
+    .then((doctors) => {
+      res.render("doctors", { doctors });
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
 
 router.post("/signup", (req, res, next) => {
