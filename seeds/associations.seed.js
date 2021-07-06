@@ -10,11 +10,20 @@ const associations = [
   {
     name: "Box 66",
     address: "Dolziger Straße 16, 10247 Berlin",
-    consultationIn: ["migration counselling", "Vocational and continuing education counselling",],
+    consultationIn: [
+      "migration counselling", 
+      "Vocational and continuing education counselling",
+    ],
     eMail: "box66@bqgankunft.de",
     website: "https://box66berlin.com/",
-    language: ["German", "English", "Polish", "Spanish", "Arabic"],
-    img: "/public/images/Box66_association.jpeg",
+    language: [
+      "German", 
+      "English", 
+      "Polish", 
+      "Spanish", 
+      "Arabic",
+    ],
+    img: "/images/Box66_association.jpeg",
   },
   {
     name: "Hinbun",
@@ -27,8 +36,14 @@ const associations = [
     ],
     eMail: "info@hinbun.de",
     website: "https://hinbun.de/",
-    language: ["German", "Sorani", "English", "Kurmancì", "arabic"],
-    img: "/public/images/Hinbun-Logo.png",
+    language: [
+      "German", 
+      "Sorani", 
+      "English", 
+      "Kurmancì", 
+      "arabic",
+    ],
+    img: "/images/Hinbun-Logo.png",
   },
   {
     name: "Frieda",
@@ -47,7 +62,7 @@ const associations = [
     eMail: "frieda@frieda-frauenzentrum.de",
     website: "https://www.frieda-frauenzentrum.de",
     language: "German",
-    img: "/public/images/Frieda-logo.png",
+    img: "/images/Frieda-logo.png",
   },
   {
     name: "Xochicuicatl e.V.",
@@ -62,8 +77,13 @@ const associations = [
     ],
     eMail: "mail@xochicuicatl.de.",
     website: "https://www.xochicuicatl.de/",
-    language: ["German", "Spanish", "Portuguese", "Italian"],
-    img: "/public/images/xochicuicatl-logo.png",
+    language: [
+      "German", 
+      "Spanish", 
+      "Portuguese", 
+      "Italian"
+    ],
+    img: "/images/xochicuicatl-logo.png",
   },
 ];
 
