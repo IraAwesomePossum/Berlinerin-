@@ -39,6 +39,7 @@ router.get("/doctors", (req, res, next) => {
 router.get("/associations", (req, res, next) => {
   Associations.find()
     .then((associations) => {
+      console.log(associations)
       res.render("associations", { associations });
     })
     .catch((err) => {

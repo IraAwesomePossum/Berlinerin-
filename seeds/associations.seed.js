@@ -46,7 +46,7 @@ const associations = [
 
 ];
 
-associations.insertMany(Associations)
+Associations.insertMany(associations)
   .then((associations) => {
     console.log("Seed successfull");
     mongoose.connection.close();
