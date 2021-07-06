@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: "Montserrat", sans-serif;
-  background-color: #ffeedb;
+  background-color: rgb(248, 241, 231);
 }
 
 .landing {
@@ -85,9 +85,15 @@ body {
 }
 
 .signup {
-  background-image: url("/images/abstract.jpg");
+  background-image: url("/images/signupBackground.jpg");
   min-height: 100vh;
   background-size: cover;
+}
+
+.signup h1 {
+  font-size: 50px;
+  padding-top: 50px;
+  font-weight: 700;
 }
 .card-body {
   background-color: rgb(205, 216, 182);
@@ -105,11 +111,11 @@ h1 {
 }
 form {
   position: absolute;
-  top: 150px;
+  top: 80px;
   margin: 0 auto;
   width: 500px;
   padding-top: 40px;
-  color: white;
+  color: black;
   position: relative;
 }
 label,
@@ -145,22 +151,6 @@ textarea {
   resize: none;
   overflow: auto;
 }
-input[type="submit"] {
-  background-color: #f90;
-  color: white;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 30px;
-  font-size: 1.29em;
-  font-family: "Sniglet", cursive;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-input[type="submit"]:hover {
-  background-color: #e58f0e;
-}
 label {
   font-size: 1.5em;
   margin-top: 20px;
@@ -168,4 +158,31 @@ label {
 }
 #map {
   height: 180px;
+}
+
+.loginHeader {
+  font-size: 50px;
+  padding-top: 50px;
+  font-weight: 700;
+}
+
+.login {
+  background-image: url("/images/loginBackground.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.signupConf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("/images/signupConf.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+.signupConf h1 {
+  padding-top: 300px;
+  font-size: 50px;
+  font-weight: 700;
 }
