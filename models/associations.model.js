@@ -7,6 +7,7 @@ const associationSchema = new Schema({
   eMail: String,
   website:String,
   language: [],
+  img: String,
   
 });
 console.log("hi")

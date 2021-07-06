@@ -1,8 +1,70 @@
-<h1>Awesome associations</h1>
-{{#each associations}}	
+<h1>Here is the list of associations</h1>
 
-{{name}} 
-{{address}}
+{{#each associations}}
+  <div class="container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <hr />
+          <div class="profile-card-4 text-center"><img
+              src="{{img}}"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <div class="profile-name">
+                  <h3>{{name}}</h3>
+              </div>
+             <!-- <div class="profile-description">Lorem ipsum dolor sit amet,
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div> 
+-->
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h4>Address</h4>
+                    <p>{{address}}</p>
+                    </div>    
+                </div>
+                </div>
 
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h4>Consultation in</h4>
+                    {{#each consultationIn}}
+                    <p>{{this}}</p>
+                    {{/each}}
+                    </div>
+                </div>
+
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h4>E-Mail</h4>
+                    <p>{{eMail}}</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h4>Website</h4>
+                    <p>{{website}}</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h4>Languages</h4>
+                    {{#each language}}
+                    <p>{{this}}</p>
+                    {{/each}}
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {{/each}}
-
