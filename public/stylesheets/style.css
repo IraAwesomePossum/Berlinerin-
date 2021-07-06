@@ -166,3 +166,6 @@ label {
   margin-top: 20px;
   padding-left: 20px;
 }
+#map {
+  height: 180px;
+}
