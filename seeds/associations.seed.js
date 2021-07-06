@@ -10,10 +10,7 @@ const associations = [
   {
     name: "Box 66",
     address: "Dolziger Straße 16, 10247 Berlin",
-    consultationIn: [
-      "migration counselling",
-      "Vocational and continuing education counselling",
-    ],
+    consultationIn: ["migration counselling", "Vocational and continuing education counselling",],
     eMail: "box66@bqgankunft.de",
     website: "https://box66berlin.com/",
     language: ["German", "English", "Polish", "Spanish", "Arabic"],
