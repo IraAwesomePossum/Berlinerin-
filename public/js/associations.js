@@ -1,5 +1,7 @@
-
-console.log("Associations.js");
-association.find(data => {
-    console.log(data);
-});
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      console.log("Associations imported successfully!");
+    },
+   // false
+  );
