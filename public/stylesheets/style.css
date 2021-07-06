@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans";
+
   background-color: rgb(248, 241, 231);
 }
 
@@ -249,8 +249,10 @@ a:focus {
   left: 0px;
   right: 0px;
   top: -70px;
-  color: #fff;
-  font-size: 17px;
+  color: black;
+  font-weight: 700;
+  font-size: 19px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .profile-card-4 .profile-name p {

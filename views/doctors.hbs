@@ -1,23 +1,14 @@
 
 <h1>Here is the list of doctors:</h1>
-{{!-- {{#each doctors}}	
-  <div class="card" style="width: 18rem;">
-  <img class="doctorImg" src="{{img}}"  class="card-img-top" alt="img">
-  <div class="card-body">
-    <h5 class="card-title">{{firstName}} {{lastName}}</h5>
-    <p class="card-text">This doctor is a {{specialisation}} with average rating of {{averageRating}}</p>
-    <a href="#" class="btn btn-primary">Doctor's website</a>
-  </div>
-</div>
-{{/each}} --}}
 
 
-{{#each doctors}}	
+
 <div class="container text-center">
 <div class="container">
 	<div class="row"> 
-		<div class="col-md-6">
+		
     <hr>
+    {{#each doctors}}	<div class="col">
     <div class="profile-card-4 text-center"><img src="{{img}}" class="img img-responsive">
         <div class="profile-content">
             <div class="profile-name">{{firstName}} {{lastName}}
@@ -43,11 +34,13 @@
             </div>
         </div>
     </div>
+    
 </div>
+{{/each}}
 	</div>
 </div>
 </div>
-{{/each}}
+
 
 
 
