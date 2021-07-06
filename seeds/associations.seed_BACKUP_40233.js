@@ -70,7 +70,12 @@ const associations = [
   },
 ];
 
+<<<<<<< HEAD
 Associations.insertMany(associations)
+=======
+associations
+  .insertMany(Associations)
+>>>>>>> refs/remotes/origin/main
   .then((associations) => {
     console.log("Seed successfull");
     mongoose.connection.close();

@@ -7,6 +7,7 @@ const doctorSchema = new Schema({
   averageRating: Number,
   address: String,
   img: String,
+  followers: Number,
 });
 
 const Doctors = mongoose.model("Doctors", doctorSchema);
