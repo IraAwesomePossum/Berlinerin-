@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const forum = require("../models/forum.model");
+const Forum = require("../models/forum.model");
 
 mongoose.connect("mongodb://localhost/Womenx", {
   useNewUrlParser: true,
@@ -7,25 +7,38 @@ mongoose.connect("mongodb://localhost/Womenx", {
 });
 
 const forum = [
-{
+  {
     name: "Angelica Fernandez",
-    iOffer: Boolean,
-    iSearch: Boolean,
-    iNeedhelp:Boolean,
+    iOffer: true,
+    iSearch: false,
+    iNeedhelp: false,
     language: "Spanish",
-    Contact: String,
-    img: "https://unsplash.com/photos/_HM4pFsXA7o/300x300",
+    text: "Hey everyone, I offer help to fill forms for all your government processes",
+    img: "/images/Angelica.jpg",
+  },
 
+  {
+    name: "Sophia Shevchenko",
+    iOffer: false,
+    iSearch: true,
+    iNeedhelp: false,
+    language: "English",
+    text: "Hello I'm looking for a coach, who can help me to reorient my career",
+    img: "/images/Sophia.jpg",
+  },
 
+  {
+    name: "Shen Yin",
+    iOffer: false,
+    iSearch: false,
+    iNeedhelp: true,
+    language: "English",
+    text: "Hey I need help to check the german grammar of my thesis. If you can help me, please send me a message with your rates",
+    img: "/images/Shen.jpg",
+  },
+];
 
-}
-    
-]
-
-
-
-
-Associations.insertMany(forum)
+Forum.insertMany(forum)
   .then((forum) => {
     console.log("Seed successfull");
     mongoose.connection.close();

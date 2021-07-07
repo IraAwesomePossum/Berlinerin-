@@ -1,24 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Berlinerin</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-     
+
         <li>
-          <a class="nav-link"  href="/profile">Home</a>
+          <a class="nav-link" href="/profile">Home</a>
         </li>
         <li>
-          <a class="nav-link active"  href="/doctors">Doctors</a>
+          <a class="nav-link active" href="/doctors">Doctors</a>
         </li>
-           <li>
-          <a class="nav-link "  href="/associations">Associations</a>
-        </li> 
-         <li>
-          <a class="nav-link "  href="/forum">Forum</a>
-        </li> 
+        <li>
+          <a class="nav-link" href="/associations">Associations</a>
+        </li>
+        <li>
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -26,48 +34,48 @@
 
 <h1>Here is the list of doctors approved by our website:</h1>
 
-
-
 <div class="container text-center">
-<div class="container">
-	<div class="row"> 
-		
-    <hr>
-    {{#each doctors}}	
-    <div class="col">
-    <div class="profile-card-4 text-center"><img src="{{img}}" class="img img-responsive">
-        <div class="profile-content">
-            <div class="profile-name">{{firstName}} {{lastName}}
+  <div class="container">
+    <div class="row">
+
+      <hr />
+      {{#each doctors}}
+        <div class="col">
+          <div class="profile-card-4 text-center"><img
+              src="{{img}}"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <div class="profile-name">{{firstName}}
+                {{lastName}}
                 <p>{{specialisation}}</p>
+              </div>
+              <div class="profile-description">Lorem ipsum dolor sit amet,
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <p>AVERAGE RATING</p>
+                    <h4>{{averageRating}}</h4></div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <p>ADDRESS</p>
+                    <h4>{{address}}</h4></div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <p>TRUSTED</p>
+                    <h4>✅</h4></div>
+                </div>
+              </div>
             </div>
-            <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
-            <div class="row">
-                <div class="col-xs-4">
-                    <div class="profile-overview">
-                        <p>AVERAGE RATING</p>
-                        <h4>{{averageRating}}</h4></div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="profile-overview">
-                        <p>ADDRESS</p>
-                        <h4>{{address}}</h4></div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="profile-overview">
-                        <p>TRUSTED</p>
-                        <h4>✅</h4></div>
-                </div>
-            </div>
+          </div>
+
         </div>
+      {{/each}}
     </div>
-    
+  </div>
 </div>
-{{/each}}
-	</div>
-</div>
-</div>
-
-
-
 
 <div id="map" style="min-height: 500px;"></div>

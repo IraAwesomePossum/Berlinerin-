@@ -6,7 +6,7 @@ const forumSchema = new Schema({
   iSearch: Boolean,
   iNeedhelp:Boolean,
   language: String,
-  Contact: String,
+  text: String,
   img: String,
   
 });

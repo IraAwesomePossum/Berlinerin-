@@ -25,3 +25,48 @@
 </nav>
 
 <h1>Forum</h1>
+
+<div class="container text-center">
+  <div class="container">
+    <div class="row">
+
+      <hr />
+      {{#each forum}}
+        <div class="col">
+          <div class="profile-card-4 text-center">
+              <img
+              src="{{img}}"
+              class="img img-responsive"/>
+            <div class="profile-content">
+              <div class="profile-name">{{name}}
+                  {{#if iSearch}}
+                  <p>I am looking for</p>
+                  {{/if}}
+                                    {{#if iOffer}}
+                  <p>I am offering</p>
+                  {{/if}}
+                                    {{#if iNeedhelp}}
+                  <p>I need help</p>
+                  {{/if}}
+              </div>
+              <div class="profile-description">{{text}}</div>
+              
+              <div class="row">
+
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <p>Language: {{language}}</p>
+                </div>
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                      <button class="btn btn-primary">Contact {{name}}</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

@@ -322,3 +322,15 @@ video {
   padding-top: 40px;
   font-weight: 500;
 }
+
+.btn-primary {
+  background-color: #dfeeea;
+  color: black;
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  background-color: #d3d3d3;
+  color: black;
+  border: none;
+}

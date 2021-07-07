@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User.model");
 const Doctors = require("../models/doctor.model");
 const Associations = require("../models/associations.model");
+const forum = require("../models/forum.model");
 const bcryptjs = require("bcrypt");
 const saltRounds = 10;
 
@@ -48,7 +49,7 @@ router.get("/associations", (req, res, next) => {
 });
 
 router.get("/forum", (req, res, next) => {
-  Associations.find()
+  forum.find()
     .then((forum) => {
       console.log(forum)
       res.render("forum", { forum });
