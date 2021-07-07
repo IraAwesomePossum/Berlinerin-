@@ -1,5 +1,5 @@
 
-<h1>Here is the list of doctors:</h1>
+<h1>Here is the list of doctors approved by our website:</h1>
 
 
 
@@ -8,7 +8,8 @@
 	<div class="row"> 
 		
     <hr>
-    {{#each doctors}}	<div class="col">
+    {{#each doctors}}	
+    <div class="col">
     <div class="profile-card-4 text-center"><img src="{{img}}" class="img img-responsive">
         <div class="profile-content">
             <div class="profile-name">{{firstName}} {{lastName}}
@@ -23,8 +24,8 @@
                 </div>
                 <div class="col-xs-4">
                     <div class="profile-overview">
-                        <p>FOLLOWERS</p>
-                        <h4>{{followers}}</h4></div>
+                        <p>ADDRESS</p>
+                        <h4>{{address}}</h4></div>
                 </div>
                 <div class="col-xs-4">
                     <div class="profile-overview">

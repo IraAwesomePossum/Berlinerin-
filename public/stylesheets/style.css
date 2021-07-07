@@ -199,7 +199,6 @@ a:focus {
 .container {
   max-width: 1200px;
 }
-
 .card-container {
   padding: 100px 0px;
   -webkit-perspective: 1000;
@@ -281,4 +280,45 @@ a:focus {
 .profile-card-4:hover img {
   transform: rotate(5deg) scale(1.1, 1.1);
   filter: brightness(110%);
+}
+
+video {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  max-width: 1000px;
+  max-height: 400px;
+  z-index: 3;
+}
+.hands {
+  position: absolute;
+  top: 400px;
+  left: 800px;
+  max-width: 450px;
+  max-height: 700px;
+  z-index: 5;
+}
+
+.profileBtn {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+}
+.plant {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  z-index: 7;
+  transform: rotate(30deg);
+}
+.plant2 {
+  position: absolute;
+  top: 0px;
+  right: 150px;
+  z-index: 7;
+  transform: rotate(30deg);
+}
+.welcome {
+  padding-top: 40px;
+  font-weight: 500;
 }

@@ -30,10 +30,6 @@ if (navigator.geolocation)
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
 
-      L.marker(coords, { icon: greenIcon })
-        .addTo(map)
-        .bindPopup("You are here")
-        .openPopup();
       L.marker(doc1).addTo(map).bindPopup("Sylvia Kollmann").openPopup();
       L.marker(doc2).addTo(map).bindPopup("Alexander Kulka").openPopup();
       L.marker(doc3).addTo(map).bindPopup("Eva Essers").openPopup();
@@ -41,7 +37,11 @@ if (navigator.geolocation)
       L.marker(doc5).addTo(map).bindPopup("Natalie Reytan").openPopup();
       L.marker(doc6).addTo(map).bindPopup("Marie Charlotte König").openPopup();
       L.marker(doc7).addTo(map).bindPopup("Andrea Conrads").openPopup();
-      L.marker(doc7).addTo(map).bindPopup("Berndt Pohl").openPopup();
+      L.marker(doc8).addTo(map).bindPopup("Berndt Pohl").openPopup();
+      L.marker(coords, { icon: greenIcon })
+        .addTo(map)
+        .bindPopup("You are here")
+        .openPopup();
     },
     function () {
       alert("Sorry, we could not fetch your position");
