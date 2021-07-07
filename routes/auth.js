@@ -47,6 +47,17 @@ router.get("/associations", (req, res, next) => {
     });
 });
 
+router.get("/forum", (req, res, next) => {
+  Associations.find()
+    .then((forum) => {
+      console.log(forum)
+      res.render("forum", { forum });
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
 
