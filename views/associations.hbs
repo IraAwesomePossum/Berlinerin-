@@ -1,21 +1,31 @@
 <h1>Here is the list of associations</h1>
 
-{{#each associations}}
+
   <div class="container text-center">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <hr />
+{{#each associations}}
           <div class="profile-card-4 text-center"><img
               src="{{img}}"
               class="img img-responsive"
           
             />
-            <div class="profile-content">
+            
+            <!-- <div class="profile-content">
               <div class="profile-name">
                   <h3>{{name}}</h3>
-              </div>
+              </div> -->
         
+        <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h2>{{name}}</h2>
+                    </div>    
+                </div>
+                </div>
+
               <div class="row">
                 <div class="col-xs-4">
                   <div class="profile-overview">
@@ -63,7 +73,7 @@
             </div>
           </div>
         </div>
+{{/each}}
       </div>
     </div>
   </div>
-{{/each}}
