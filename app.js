@@ -28,7 +28,8 @@ app.use(
     saveUninitialized: false,
     resave: true,
     store: MongoStore.create({
-      mongoUrl: "mongodb://localhost/Womenx",
+      mongoUrl:
+        "mongodb+srv://ifalko:vbHmQSn56TWdWpd9@cluster0.madcu.mongodb.net/Berlinerin?retryWrites=true&w=majority",
     }),
   })
 );
@@ -45,7 +46,7 @@ const index = require("./routes/index");
 app.use("/", index);
 const auth = require("./routes/auth");
 app.use("/", auth);
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
