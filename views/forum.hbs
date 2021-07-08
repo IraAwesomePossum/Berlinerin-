@@ -25,6 +25,7 @@
 </nav>
 
 <h1>Forum</h1>
+
 <div class="con">
 
 <div class="container text-center">
@@ -39,11 +40,11 @@
               class="img img-responsive"/>
             <div class="profile-content">
               <div class="profile-name">{{name}}
-                  {{#if iSearch}}
-                  <p>I am looking for</p>
-                  {{/if}}
-                                    {{#if iOffer}}
+                  {{#if iOffer}}
                   <p>I am offering</p>
+                  {{/if}}
+                                    {{#if iSearch}}
+                  <p>I am looking for</p>
                   {{/if}}
                                     {{#if iNeedhelp}}
                   <p>I need help</p>
@@ -66,14 +67,6 @@
           </div>
 
         </div>
-<<<<<<< HEAD
-      
-    </div>
-  </div>
-  </div>
-</div>
-{{/each}}
-=======
      
     </div>
   </div> 
@@ -81,6 +74,30 @@
 </div>
 </div>
 </div>
->>>>>>> refs/remotes/origin/main
 </div>
 
+<form>
+<ul class="form-style-1">
+  <h3>Write a new post</h3>
+    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" /> <input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+    <li>
+        <label>Email <span class="required">*</span></label>
+        <input type="email" name="field3" class="field-long" />
+    </li>
+    <li>
+        <label>What is the purpose of your post?</label>
+        <select name="field4" class="field-select">
+        <option value="iOffer">I am offering</option>
+        <option value="iSearch">I am looking for</option>
+        <option value="iNeedhelp">I need help</option>
+        </select>
+    </li>
+    <li>
+        <label>Your Message <span class="required">*</span></label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+    </li>
+    <li>
+        <input type="submit" value="Submit" />
+    </li>
+</ul>
+</form>
