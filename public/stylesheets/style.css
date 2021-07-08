@@ -329,8 +329,18 @@ video {
   border: none;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
   background-color: #d3d3d3;
   color: black;
   border: none;
+}
+
+.con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
