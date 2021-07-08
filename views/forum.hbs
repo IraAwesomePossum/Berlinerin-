@@ -1,24 +1,33 @@
+<script src="./js/forum.js"></script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Berlinerin</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-     
+
         <li>
-          <a class="nav-link"  href="/profile">Home</a>
+          <a class="nav-link" href="/profile">Home</a>
         </li>
         <li>
-          <a class="nav-link"  href="/doctors">Doctors</a>
+          <a class="nav-link" href="/doctors">Doctors</a>
         </li>
-           <li>
-          <a class="nav-link "  href="/associations">Associations</a>
-        </li> 
-         <li>
-          <a class="nav-link active"  href="/forum">Forum</a>
-        </li> 
+        <li>
+          <a class="nav-link" href="/associations">Associations</a>
+        </li>
+        <li>
+          <a class="nav-link active" href="/forum">Forum</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -28,76 +37,87 @@
 
 <div class="con">
 
-<div class="container text-center">
-  <div class="container">
-    <div class="row">
-      <hr />
-      {{#each forum}}
-        <div class="col">
-          <div class="profile-card-4 text-center">
-              <img
-              src="{{img}}"
-              class="img img-responsive"/>
-            <div class="profile-content">
-              <div class="profile-name">{{name}}
+  <div class="container text-center">
+    <div class="container">
+      <div class="row">
+        <hr />
+        {{#each forum}}
+          <div class="col">
+            <div class="profile-card-4 text-center">
+              <img src="{{img}}" class="img img-responsive" />
+              <div class="profile-content">
+                <div class="profile-name">
+                  {{name}}
                   {{#if iOffer}}
-                  <p>I am offering</p>
+                    <p>I am offering</p>
                   {{/if}}
-                                    {{#if iSearch}}
-                  <p>I am looking for</p>
+                  {{#if iSearch}}
+                    <p>I am looking for</p>
                   {{/if}}
-                                    {{#if iNeedhelp}}
-                  <p>I need help</p>
+                  {{#if iNeedhelp}}
+                    <p>I need help</p>
                   {{/if}}
-              </div>
-              <div class="profile-description">{{text}}</div>
-              
-              <div class="row">
+                </div>
+                <div class="profile-description">{{text}}</div>
 
-                <div class="col-xs-4">
-                  <div class="profile-overview">
-                    <p>Language: {{language}}</p>
-                </div>
-                <div class="col-xs-4">
-                  <div class="profile-overview">
-                      <button class="btn btn-primary">Contact {{name}}</button>
+                <div class="row">
+
+                  <div class="col-xs-4">
+                    <div class="profile-overview">
+                      <p>Language: {{language}}</p>
                     </div>
+                    <div class="col-xs-4">
+                      <div class="profile-overview">
+                        <button class="btn btn-primary">Contact
+                          {{name}}</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+              </div>
+
             </div>
           </div>
-
-        </div>
-     
+        {{/each}}
+      </div>
     </div>
-  </div> 
-  {{/each}}
-</div>
-</div>
-</div>
+  </div>
 </div>
 
-<form>
-<ul class="form-style-1">
-  <h3>Write a new post</h3>
-    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" /> <input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
-    <li>
-        <label>Email <span class="required">*</span></label>
-        <input type="email" name="field3" class="field-long" />
+<form action="/forum" method="POST">
+  <ul class="form-style-1">
+    <h3>Write a new post</h3>
+    <li><label>Full Name <span class="required">*</span></label><input
+        type="text"
+        name="name"
+        class="field-divided"
+        placeholder="Your name"
+        id="forumName"
+      />
     </li>
     <li>
-        <label>What is the purpose of your post?</label>
-        <select name="field4" class="field-select">
+      <label>Language <span class="required">*</span></label>
+      <input type="text" name="language" class="field-long" id="forumLanguage" />
+    </li>
+    <li>
+      <label>What is the purpose of your post?</label>
+      <select name="purpose" class="field-select" id="forumPurpose">
         <option value="iOffer">I am offering</option>
         <option value="iSearch">I am looking for</option>
         <option value="iNeedhelp">I need help</option>
-        </select>
+      </select>
     </li>
     <li>
-        <label>Your Message <span class="required">*</span></label>
-        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+      <label>Your Message <span class="required">*</span></label>
+      <textarea
+        name="message"
+        class="field-long field-textarea"
+        id="forumMessage"
+      ></textarea>
     </li>
     <li>
-        <input type="submit" value="Submit" />
+      <input type="submit" value="Submit"  />
     </li>
-</ul>
+  </ul>
 </form>
