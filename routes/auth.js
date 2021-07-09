@@ -40,7 +40,7 @@ router.get("/doctors", (req, res, next) => {
 router.get("/associations", (req, res, next) => {
   Associations.find()
     .then((associations) => {
-      console.log(associations)
+      console.log(associations);
       res.render("associations", { associations });
     })
     .catch((err) => {
@@ -49,9 +49,10 @@ router.get("/associations", (req, res, next) => {
 });
 
 router.get("/forum", (req, res, next) => {
-  forum.find()
+  forum
+    .find()
     .then((forum) => {
-      console.log(forum)
+      console.log(forum);
       res.render("forum", { forum });
     })
     .catch((err) => {
@@ -61,7 +62,7 @@ router.get("/forum", (req, res, next) => {
 
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
-
+  console.log(req.body);
   const salt = bcryptjs.genSaltSync();
   const hash = bcryptjs.hashSync(password, salt);
   console.log(hash);
@@ -76,16 +77,14 @@ router.post("/signup", (req, res, next) => {
 });
 
 router.post("/login", (req, res, next) => {
-  console.log(req.session);
+  console.log(req.body);
   const { username, password } = req.body;
   User.findOne({ username: username })
     .then((userFromDB) => {
       if (userFromDB === null) {
         res.render("login", { message: "Invalid credentials" });
         return;
-      }
-
-      if (bcryptjs.compareSync(password, userFromDB.password)) {
+      } else if (bcryptjs.compareSync(password, userFromDB.password)) {
         req.session.user = userFromDB;
         res.redirect("/profile");
       } else {

@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 const Doctors = require("../models/doctor.model");
 
-mongoose.connect("mongodb://localhost/Womenx", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://ifalko:vbHmQSn56TWdWpd9@cluster0.madcu.mongodb.net/Berlinerin?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const doctors = [
   {

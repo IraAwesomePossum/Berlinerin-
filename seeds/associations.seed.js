@@ -1,28 +1,25 @@
 const mongoose = require("mongoose");
 const Associations = require("../models/associations.model");
 
-mongoose.connect("mongodb://localhost/Womenx", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://ifalko:vbHmQSn56TWdWpd9@cluster0.madcu.mongodb.net/Berlinerin?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const associations = [
   {
     name: "Box 66",
     address: "Dolziger Straße 16, 10247 Berlin",
     consultationIn: [
-      "migration counselling", 
+      "migration counselling",
       "Vocational and continuing education counselling",
     ],
     eMail: "box66@bqgankunft.de",
     website: "https://box66berlin.com/",
-    language: [
-      "German", 
-      "English", 
-      "Polish", 
-      "Spanish", 
-      "Arabic",
-    ],
+    language: ["German", "English", "Polish", "Spanish", "Arabic"],
     img: "/images/Box66_association.jpeg",
   },
   {
@@ -36,13 +33,7 @@ const associations = [
     ],
     eMail: "info@hinbun.de",
     website: "https://hinbun.de/",
-    language: [
-      "German", 
-      "Sorani", 
-      "English", 
-      "Kurmancì", 
-      "arabic",
-    ],
+    language: ["German", "Sorani", "English", "Kurmancì", "arabic"],
     img: "/images/Hinbun-Logo.png",
   },
   {
@@ -77,12 +68,7 @@ const associations = [
     ],
     eMail: "mail@xochicuicatl.de.",
     website: "https://www.xochicuicatl.de/",
-    language: [
-      "German", 
-      "Spanish", 
-      "Portuguese", 
-      "Italian"
-    ],
+    language: ["German", "Spanish", "Portuguese", "Italian"],
     img: "/images/xochicuicatl-logo.png",
   },
 ];
